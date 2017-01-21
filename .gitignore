@@ -1,0 +1,12 @@
+#----------------------------------------------------------------------------
+# Ignore these files when commiting to a git repository.
+#
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Corrections? Improvements? Create a GitHub issue:
+#----------------------------------------------------------------------------
+
+.idea/*
+/.idea
+#.gitignore
+**.swp
+.idea/misc.xml
