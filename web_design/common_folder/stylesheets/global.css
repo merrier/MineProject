@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* Global Reset */
+/* +--------------------------------------------------------------------------
+// | Author: Merrier <953075999@qq.com> <http://> <Date:2017/1/21 12:40>
+// +--------------------------------------------------------------------------*/
+
+html, body, div, span, button, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-family: "微软雅黑", "Microsoft Yahei", "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 28px;
+    font-size: 15px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.clear {
+    clear: both;
+}
+
+.pcOnly {
+    display: block;
+}
+
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .mobile {
+        display: block;
+    }
+
+    .pcOnly {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .pc {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+

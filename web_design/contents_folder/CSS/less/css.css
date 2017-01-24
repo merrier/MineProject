@@ -1,0 +1,271 @@
+/* +--------------------------------------------------------------------------
+// | Author: Merrier <953075999@qq.com> <http://> <Date:2017/1/21 13:15>
+// +--------------------------------------------------------------------------*/
+/* +--------------------------------------------------------------------------
+// | Author: Merrier <953075999@qq.com> <http://> <Date:2016/1/21 13:15>
+// +--------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'SourceHanSansCN-Medium';
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Medium.otf'), url('../fonts/SourceHanSansCN/SourceHanSansCN-Medium.TTF');
+}
+@font-face {
+  font-family: 'SourceHanSansCN-Normal';
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Normal.otf');
+}
+.font_yahei {
+  font-family: 'Microsoft Yahei', '微软雅黑';
+}
+.font_arial {
+  font-family: 'Arial';
+}
+.font_sitka {
+  font-family: 'Sitka';
+}
+.font_hei {
+  font-family: '黑体';
+}
+.center_block {
+  margin-left: auto;
+  margin-right: auto;
+}
+.content_box {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.bg_white {
+  background-color: #ffffff;
+}
+.bg_black {
+  background-color: #000000;
+}
+.bg_black * {
+  color: #ffffff;
+}
+.btn_modal_close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  right: 10px;
+  top: 5px;
+  font-size: 40px;
+  color: #00b6f6;
+  cursor: pointer;
+}
+.btn_modal_close:hover {
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  -o-transform-origin: center center;
+  -moz-transform-origin: center center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns a {
+  float: left;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 5px 10px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns a:hover {
+  text-decoration: none;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .beautiful_btn_box {
+  float: left;
+  margin: 5px 10px;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_1 .btn_1_1 {
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #000;
+  border: 1px solid #00b7f9;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_1 .btn_1_1:hover {
+  background-color: #00b7f9;
+  color: #ffffff;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_1 .btn_1_2 {
+  border: 1px solid #0070cc;
+  border-radius: 2px;
+  color: #0070cc;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_1 .btn_1_2:hover {
+  background-color: #0070cc;
+  color: #ffffff;
+  text-decoration: underline;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_1 {
+  -ms-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.15s;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_1:hover {
+  background-color: #00b7f9;
+  color: #ffffff;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_2_box {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 29px;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_2_box:hover .btn_2_2_border {
+  top: 7px;
+  left: 7px;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_2_box .btn_2_2_border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #faff8a;
+  left: -7px;
+  top: -7px;
+  border: 2px solid #fdf876;
+  transition: all 0.3s ease-in-out;
+}
+html body .wrp .wrp_content .content_box.beautiful_btns .content_des .btn_content_2 .btn_2_2_box .btn_2_2 {
+  position: absolute;
+  width: 90px;
+  height: 29px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  color: #020202;
+  background-color: #fdf876;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 {
+  background-color: #2f383f;
+  color: #fff;
+  opacity: 0.7;
+  text-align: center;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 img {
+  vertical-align: middle;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 .excellent_designs_left {
+  padding-right: 10px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 a {
+  color: #fff;
+  font-size: 24px;
+  height: 100%;
+  vertical-align: middle;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 a:hover {
+  text-decoration: none;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_1 .excellent_designs_right {
+  padding-left: 10px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .content_des_box.design_content_2 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  color: #666;
+  padding-left: 40px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .content_des_box.design_content_2 h4 {
+  position: relative;
+  color: #000;
+  font-weight: 400;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .content_des_box.design_content_2 h4 span {
+  position: absolute;
+  top: 0;
+  left: -45px;
+  font-size: 30px;
+  line-height: 20px;
+  color: #000;
+  font-weight: 400;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .content_des_box.design_content_2 ul {
+  margin-top: 8px;
+  line-height: 25px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .content_des_box.design_content_2 p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 a:hover {
+  text-decoration: none;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list1 li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 -2px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list1 li a {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+  color: #404a58;
+  transition: .2s ease background;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list1 li a:hover {
+  background: #cde8ff;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list1 li.design_3_1_current a {
+  position: relative;
+  color: #fff;
+  background: #2277da;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list1 li.design_3_1_current a:after {
+  content: '';
+  border: 8px solid transparent;
+  border-top-color: #0070cc;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  margin-left: -8px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list2 {
+  margin-top: 20px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list2 li {
+  display: inline-block;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list2 li a {
+  color: #000;
+  padding-bottom: 10px;
+  padding-right: 30px;
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list2 li a:hover {
+  color: rgba(0, 112, 204, 0.7);
+}
+html body .wrp .wrp_content .content_box.excellent_designs .content_des .design_content_3 .design_3_list2 li.design_3_2_current a {
+  color: #0070cc;
+  font-weight: 700;
+}

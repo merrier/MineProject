@@ -1,0 +1,260 @@
+/* +--------------------------------------------------------------------------
+// | Author: Merrier <953075999@qq.com> <http://> <Date:2017/1/21 13:15>
+// +--------------------------------------------------------------------------*/
+//引入全局less
+@import "../../../common_folder/less/library";
+
+html{
+  body{
+    .wrp{
+      .wrp_content {
+
+        .content_box {
+
+        }
+        //好看的按钮开始
+        .content_box.beautiful_btns {
+
+          a {
+            float: left;
+            display: inline-block;
+            padding: 5px 20px;
+            margin: 5px 10px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          .beautiful_btn_box{
+            float: left;
+            margin: 5px 10px;
+          }
+
+          .content_des {
+
+            .btn_content_1 {
+
+              .btn_1_1 {
+                .border-radius(5px);
+                color: #000;
+                border: 1px solid #00b7f9;
+
+                &:hover {
+                  background-color: #00b7f9;
+                  color: #ffffff;
+                }
+              }
+              .btn_1_2{
+                border: 1px solid #0070cc;
+                border-radius: 2px;
+                color: #0070cc;
+
+                &:hover {
+                  background-color: #0070cc;
+                  color: #ffffff;
+                  text-decoration: underline;
+                }
+              }
+
+            }
+            .btn_content_2 {
+
+              .btn_2_1 {
+                .border-radius(2px);
+                color: #fff;
+                border: 1px solid #fff;
+                border-color: rgba(255, 255, 255, .2);
+                transition: background-color .15s;
+
+                &:hover {
+                  background-color: #00b7f9;
+                  color: #ffffff;
+                }
+              }
+              .btn_2_2_box {
+                position: relative;
+                display: inline-block;
+                .size(90px,29px);
+
+                &:hover{
+                  .btn_2_2_border{
+                    top:7px;
+                    left:7px;
+                  }
+                }
+
+                .btn_2_2_border {
+                  position: absolute;
+                  .size(100%,100%);
+                  color:#faff8a;
+                  left:-7px;
+                  top:-7px;
+                  border:2px solid #fdf876;
+                  transition: all 0.3s ease-in-out;
+                }
+                .btn_2_2 {
+                  position: absolute;
+                  .size(90px,29px);
+                  margin: 0;
+                  top: 0;
+                  left: 0;
+                  color: #020202;
+                  background-color: #fdf876;
+
+
+                }
+              }
+            }
+          }
+        }
+        //好看的按钮结束
+
+        //优秀的设计开始
+        .content_box.excellent_designs{
+
+          .content_des{
+
+            .design_content_1{
+              background-color: #2f383f;
+              color:#fff;
+              opacity: 0.7;
+              text-align: center;
+
+              img{
+                vertical-align: middle;
+              }
+
+              .excellent_designs_left{
+                padding-right: 10px;
+              }
+
+              a{
+                color: #fff;
+                font-size: 24px;
+                height:100%;
+                vertical-align: middle;
+
+                &:hover{
+                  text-decoration: none;
+                }
+              }
+              .excellent_designs_right{
+                padding-left: 10px;
+              }
+            }
+
+            .content_des_box.design_content_2{
+              display: inline-block;
+              vertical-align: top;
+              font-size: 14px;
+              color: #666;
+              padding-left:40px;
+
+              h4{
+                position: relative;
+                color: #000;
+                font-weight: 400;
+
+                span{
+                  position: absolute;
+                  top: 0;
+                  left: -45px;
+                  font-size: 30px;
+                  line-height: 20px;
+                  color: #000;
+                  font-weight: 400;
+                }
+              }
+              ul{
+                margin-top: 8px;
+                line-height: 25px;
+              }
+              p{
+                margin-top: 5px;
+                font-size: 14px;
+              }
+            }
+
+            .design_content_3{
+
+              a{
+                &:hover{
+                  text-decoration: none;
+                }
+              }
+
+              .design_3_list1{
+
+                li{
+                  display: inline-block;
+                  vertical-align: top;
+                  margin: 0 -2px;
+
+                  a{
+                    display: inline-block;
+                    .size(90px,30px);
+                    line-height: 30px;
+                    text-align: center;
+                    background: #fff;
+                    color: #404a58;
+                    transition: .2s ease background;
+
+                    &:hover{
+                      background: #cde8ff;
+                    }
+                  }
+                }
+                li.design_3_1_current{
+                  a{
+                    position: relative;
+                    color:#fff;
+                    background: #2277da;
+
+                    &:after{
+                      content: '';
+                      border: 8px solid transparent;
+                      border-top-color: #0070cc;
+                      position: absolute;
+                      bottom: -16px;
+                      left: 50%;
+                      margin-left: -8px;
+                    }
+                  }
+                }
+              }
+
+              .design_3_list2{
+                margin-top: 20px;
+
+                li{
+                  display: inline-block;
+
+                  a{
+                    color: #000;
+                    padding-bottom: 10px;
+                    padding-right: 30px;
+
+                    &:hover{
+                      color: rgba(0,112,204,0.7);
+                    }
+                  }
+                }
+                li.design_3_2_current{
+                   a{
+                     color:#0070cc;
+                     font-weight: 700;
+                   }
+                }
+              }
+            }
+          }
+        }
+        //优秀的设计结束
+      }
+    }
+  }
+}
+

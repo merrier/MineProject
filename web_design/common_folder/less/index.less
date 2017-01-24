@@ -1,0 +1,154 @@
+/* +--------------------------------------------------------------------------
+// | Author: Merrier <953075999@qq.com> <http://> <Date:2017/1/21 13:15>
+// +--------------------------------------------------------------------------*/
+//引入全局less
+@import "library";
+
+html {
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    -webkit-text-size-adjust: none;
+
+    //顶部导航开始
+    header.navbar {
+      background-color: #1a1a1a;
+
+      .navbar-right {
+
+        .nav-icon-box {
+          position: absolute;
+          height: 78px;
+          width: 78px;
+          border: 4px solid #272727;;
+          background: #212121;
+          right: 4%;
+          text-align: center;
+          top: 0;
+
+          img {
+            .img-responsive;
+          }
+        }
+      }
+    }
+    //顶部导航结束
+
+    //主体内容开始
+    .wrp {
+      margin-bottom: 0;
+
+      .wrp_header{
+        padding-top:20px;
+        padding-bottom:20px;
+
+        h2{
+          margin-top:30px;
+          margin-bottom: 0;
+          font-weight: normal;
+        }
+        p{
+          font-size:18px;
+          color: #999;
+        }
+      }
+      .wrp_content{
+
+        .content_main{
+
+          .content_box{
+            margin-bottom: 20px;
+
+            p{
+              font-size: 16px;
+            }
+            .content_meta{
+              margin-bottom: 5px;
+              color:#999;
+            }
+            .content_des{
+
+              .content_des_box{
+                .clearfix;
+                padding:5px 10px;
+                margin-bottom: 10px;
+
+                h4{
+                  margin:5px 0;
+                }
+              }
+            }
+          }
+        }
+
+        .wrp_sidebar{
+
+          .sidebar_module{
+            padding:15px;
+            margin:0 -15px 15px;
+
+            h4{
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    //主体内容结束
+
+    //尾部开始
+    footer {
+      text-align: center;
+      background: #000;
+      width: 100%;
+      font-size: 12px;
+      margin: auto;
+      padding-bottom: 30px;
+
+      a {
+        color: #b6b6b6;
+      }
+
+      p {
+        color: #6c6c6c;
+      }
+
+      .footer_qr {
+
+        li {
+          display: inline-block;
+          margin: 62px 30px 40px;
+          color: #b6b6b6;
+          width: 119px;
+          vertical-align: top;
+
+          img {
+            width: 80%;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .footer_menu {
+        padding: 15px 0 14px;
+
+        li {
+          display: inline-block;
+          border-right: 1px solid #b6b6b6;
+
+          a {
+            padding: 0 16px;
+          }
+        }
+      }
+    }
+    //尾部结束
+
+  }
+}
