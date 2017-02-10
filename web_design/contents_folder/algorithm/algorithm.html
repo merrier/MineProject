@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--360 浏览器在读取到这个标签后，立即切换对应的极速核-->
+    <meta name="renderer" content="webkit">
+    <!--优先使用 IE 最新版本和 Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--百度禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--搜索引擎关键字-->
+    <meta name="keywords" content="Merrier,游戏爱好者，网易分析">
+    <!--网站描述-->
+    <meta name="description" content="Merrier的淘宝小屋系列之自己的网站">
+
+    <title>Merrier的淘宝小屋-算法</title>
+
+    <!--全局css开始-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../common_folder/stylesheets/global.css"/>
+    <link rel="stylesheet/less" href="../../common_folder/less/index.less"/>
+
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon"/>
+    <!--全局css结束-->
+
+    <link rel="stylesheet/less" href="less/algorithm.less"/>
+
+</head>
+
+
+<body>
+
+<!--顶部导航开始-->
+
+<header class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm" href="../index/index.html">Merrier的淘宝小屋</a>
+        </div>
+
+        <div class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li><a href="" target="_blank">算法</a></li>
+                <li><a href="" target="_blank">随笔</a></li>
+                <li><a href="" target="_blank">小白宝典</a></li>
+                <li><a href="" target="_blank">HTML</a></li>
+                <li><a href="" target="_blank">CSS</a></li>
+                <li><a href="" target="_blank">JS</a></li>
+                <li><a href="" target="_blank">插件</a></li>
+                <li><a href="" target="_blank">总结</a></li>
+                <li><a href="" target="_blank">其他</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+                <li>
+                    <a href="" target="_blank">联系我</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+<!--顶部导航结束-->
+
+<!--主体内容开始-->
+<div class="wrp jumbotron masthead">
+    <div class="container">
+        <div class="wrp_header">
+            <h2>算法</h2>
+            <p>这里展示了算法相关内容，包括如何实现及演示</p>
+        </div>
+
+        <div class="wrp_content row">
+
+            <div class="col-sm-8 content_main">
+
+                <div class="content_box">
+                    <h3>排序算法</h3>
+                    <p class="content_meta">2017-2-6</p>
+
+                    <div class="content_des">
+
+                        <!--排序算法总结开始-->
+                        <div class="content_des_box" id="sort_summary">
+                            <h4>排序算法说明</h4>
+
+                            <ul>
+                                <li>
+                                    <label>排序的定义</label>
+                                    <p>输入：n个数：a1,a2,a3,…,an</p>
+                                    <p>输出：n个数的排列:a1',a2',a3',…,an'，使得a1'&lt;a2'&lt;a3'&lt;...&lt;an'</p>
+                                </li>
+
+                                <li>
+                                    <label>对于评述算法优劣术语的说明</label>
+                                    <p><strong>稳定：</strong>如果a原本在b前面，而a=b，排序之后a仍然在b的前面；</p>
+                                    <p><strong>不稳定：</strong>如果a原本在b的前面，而a=b，排序之后a可能会出现在b的后面；</p>
+                                    <br/>
+                                    <p><strong>内排序：</strong>所有排序操作都在内存中完成；</p>
+                                    <p><strong>外排序：</strong>由于数据太大，因此把数据放在磁盘中，而排序通过磁盘和内存的数据传输才能进行；</p>
+                                    <br/>
+                                    <p><strong>时间复杂度：</strong>一个算法执行所耗费的时间。</p>
+                                    <p><strong>空间复杂度：</strong>运行完一个程序所需内存的大小。</p>
+                                </li>
+
+                                <li>
+                                    <label>排序算法图片总结</label>
+                                    <h5>排序对比</h5>
+                                    <img src="images/sort_complexity_summary.png"/>
+
+                                    <h5>图片名词解释</h5>
+                                    <p>n: 数据规模</p>
+                                    <p>k:“桶”的个数</p>
+                                    <p>In-place: 占用常数内存，不占用额外内存</p>
+                                    <p>Out-place: 占用额外内存</p>
+
+                                    <h5>排序分类</h5>
+                                    <img src="images/sort_classify.png"/>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--算法总结结束-->
+
+                        <!--冒泡排序开始-->
+                        <div class="content_des_box" id="bubble_sort">
+                            <h4>冒泡排序</h4>
+
+                            <blockquote>对于它每个学过C语言的都会了解的吧，这可能是很多人接触的第一个排序算法。</blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        冒泡排序是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>比较相邻的元素。如果第一个比第二个大，就交换它们两个；</li>
+                                        <li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数；</li>
+                                        <li>针对所有的元素重复以上的步骤，除了最后一个；</li>
+                                        <li>重复步骤1~3，直到排序完成。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/bubble_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/bubble_sort.js"
+                                           target="_blank">冒泡排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n)=>当输入的数据已经是正序时</li>
+                                        <li>最差情况：T(n)=O(n2)=>当输入的数据是反序时</li>
+                                        <li>平均情况：T(n)=O(n2)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--冒泡排序结束-->
+
+                        <!--选择排序开始-->
+                        <div class="content_des_box" id="selection_sort">
+                            <h4>选择排序</h4>
+
+                            <blockquote>
+                                表现最稳定的排序算法之一(这个稳定不是指算法层面上的稳定哈，相信聪明的你能明白我说的意思2333)，因为无论什么数据进去都是O(n²)的时间复杂度…..所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。理论上讲，选择排序可能也是平时排序一般人想到的最多的排序方法了吧。
+                            </blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        选择排序(Selection-sort)是一种简单直观的排序算法。它的工作原理：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>初始状态：无序区为R[1..n]，有序区为空；</li>
+                                        <li>第i趟排序(i=1,2,3…n-1)开始时，当前有序区和无序区分别为R[1..i-1]和R(i..n）。该趟排序从当前无序区中-选出关键字最小的记录
+                                            R[k]，将它与无序区的第1个记录R交换，使R[1..i]和R[i+1..n)分别变为记录个数增加1个的新有序区和记录个数减少1个的新无序区；
+                                        </li>
+                                        <li>n-1趟结束，数组有序化了。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/selection_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/selection_sort.js" target="_blank">选择排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n2)</li>
+                                        <li>最差情况：T(n)=O(n2)</li>
+                                        <li>平均情况：T(n)=O(n2)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--选择排序结束-->
+
+                        <!--插入排序开始-->
+                        <div class="content_des_box" id="insertion_sort">
+                            <h4>插入排序</h4>
+
+                            <blockquote>
+                                插入排序的代码实现虽然没有冒泡排序和选择排序那么简单粗暴，但它的原理应该是最容易理解的了，因为只要打过扑克牌的人都应该能够秒懂。当然，如果你说你打扑克牌摸牌的时候从来不按牌的大小整理牌，那估计这辈子你对插入排序的算法都不会产生任何兴趣了…..
+                            </blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        插入排序（Insertion-Sort）的算法描述是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>从第一个元素开始，该元素可以认为已经被排序；</li>
+                                        <li>取出下一个元素，在已经排序的元素序列中从后向前扫描；</li>
+                                        <li>如果该元素（已排序）大于新元素，将该元素移到下一位置；</li>
+                                        <li>重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；</li>
+                                        <li>将新元素插入到该位置后；</li>
+                                        <li>重复步骤2~5。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/insertion_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/insertion_sort.js" target="_blank">插入排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n)=>输入数组按升序排列</li>
+                                        <li>最差情况：T(n)=O(n2)=>输入数组按降序排列</li>
+                                        <li>平均情况：T(n)=O(n2)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--插入排序结束-->
+
+                        <!--希尔排序开始-->
+                        <div class="content_des_box" id="shell_sort">
+                            <h4>排序</h4>
+
+                            <blockquote>
+                                1959年Shell发明；第一个突破O(n^2)的排序算法；是简单插入排序的改进版；它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序又叫缩小增量排序
+                            </blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        希尔排序的核心在于间隔序列的设定。既可以提前设定好间隔序列，也可以动态的定义间隔序列。动态定义间隔序列的算法是《算法（第4版》的合著者Robert
+                                        Sedgewick提出的。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>选择一个增量序列t1，t2，…，tk，其中ti>tj，tk=1；</li>
+                                        <li>按增量序列个数k，对序列进行k 趟排序；</li>
+                                        <li>每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1
+                                            时，整个序列作为一个表来处理，表长度即为整个序列的长度。
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>图示</label>
+                                    <img src="images/shell_sort.png"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/shell_sort.js"
+                                           target="_blank">希尔排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(nlog2n)</li>
+                                        <li>最差情况：T(n)=O(nlog2n)</li>
+                                        <li>平均情况：T(n)=O(nlogn)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--希尔排序结束-->
+
+                        <!--归并排序开始-->
+                        <div class="content_des_box" id="merge_sort">
+                            <h4>归并排序</h4>
+
+                            <blockquote>和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。
+                            </blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and
+                                        Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>把长度为n的输入序列分成两个长度为n/2的子序列；</li>
+                                        <li>对这两个子序列分别采用归并排序；</li>
+                                        <li>将两个排序好的子序列合并成一个最终的排序序列。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/merge_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/merge_sort.js"
+                                           target="_blank">归并排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n)</li>
+                                        <li>最差情况：T(n)=O(nlogn)</li>
+                                        <li>平均情况：T(n)=O(nlogn)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--归并排序结束-->
+
+                        <!--快速排序开始-->
+                        <div class="content_des_box" id="quick_sort">
+                            <h4>快速排序</h4>
+
+                            <blockquote>快速排序的名字起的是简单粗暴，因为一听到这个名字你就知道它存在的意义，就是快，而且效率高! 它是处理大数据最快的排序算法之一了。</blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>从数列中挑出一个元素，称为 “基准”（pivot）；</li>
+                                        <li>
+                                            重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
+                                        </li>
+                                        <li>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/quick_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/quick_sort.js"
+                                           target="_blank">快速排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(nlogn)</li>
+                                        <li>最差情况：T(n)=O(n2)</li>
+                                        <li>平均情况：T(n)=O(nlogn)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--快速排序结束-->
+
+                        <!--堆排序开始-->
+                        <div class="content_des_box" id="heap_sort">
+                            <h4>堆排序</h4>
+
+                            <blockquote>堆排序可以说是一种利用堆的概念来排序的选择排序。</blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>
+                                        堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>将初始待排序关键字序列(R1,R2….Rn)构建成大顶堆，此堆为初始的无序区；</li>
+                                        <li>
+                                            将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]<=R[n]；
+                                        </li>
+                                        <li>
+                                            由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为n-1，则整个排序过程完成。
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/heap_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/heap_sort.js" target="_blank">堆排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(nlogn)</li>
+                                        <li>最差情况：T(n)=O(nlogn)</li>
+                                        <li>平均情况：T(n)=O(nlogn)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--堆排序结束-->
+
+                        <!--计数排序开始-->
+                        <div class="content_des_box" id="counting_sort">
+                            <h4>计数排序</h4>
+
+                            <blockquote>计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。
+                            </blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>计数排序(Counting
+                                        sort)是一种稳定的排序算法。计数排序使用一个额外的数组C，其中第i个元素是待排序数组A中值等于i的元素的个数。然后根据数组C来将A中的元素排到正确的位置。它只能对整数进行排序。
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>找出待排序的数组中最大和最小的元素；</li>
+                                        <li>统计数组中每个值为i的元素出现的次数，存入数组C的第i项；</li>
+                                        <li>对所有的计数累加（从C中的第一个元素开始，每一项和前一项相加）；</li>
+                                        <li>反向填充目标数组：将每个元素i放在新数组的第C(i)项，每放一个元素就将C(i)减去1。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/counting_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/counting_sort.js" target="_blank">计数排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <blockquote>当输入的元素是n个0到k之间的整数时，它的运行时间是 O(n +
+                                        k)。计数排序不是比较排序，排序的速度快于任何比较排序算法。由于用来计数的数组C的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上1），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。
+                                    </blockquote>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n+k)</li>
+                                        <li>最差情况：T(n)=O(n+k)</li>
+                                        <li>平均情况：T(n)=O(n+k)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--计数排序结束-->
+
+                        <!--桶排序开始-->
+                        <div class="content_des_box" id="bucket_sort">
+                            <h4>桶排序</h4>
+
+                            <blockquote>桶排序是计数排序的升级版。它利用了函数的映射关系，高效与否的关键就在于这个映射函数的确定。</blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>桶排序 (Bucket sort)的工作的原理：假设输入数据服从均匀分布，将数据分到有限数量的桶里，每个桶再分别排序（有可能再使用别的排序算法或是以递归方式继续使用桶排序进行排序。</blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>设置一个定量的数组当作空桶；</li>
+                                        <li>遍历输入数据，并且把数据一个一个放到对应的桶里去；</li>
+                                        <li>对每个不是空的桶进行排序；</li>
+                                        <li>从不是空的桶里把排好序的数据拼接起来。</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>图示</label>
+                                    <img src="images/bucket_sort.png"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/bucket_sort.js" target="_blank">桶排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <blockquote>桶排序最好情况下使用线性时间O(n)，桶排序的时间复杂度，取决与对各个桶之间数据进行排序的时间复杂度，因为其它部分的时间复杂度都为O(n)。很显然，桶划分的越小，各个桶之间的数据越少，排序所用的时间也会越少。但相应的空间消耗就会增大。</blockquote>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n+k)</li>
+                                        <li>最差情况：T(n)=O(n+k)</li>
+                                        <li>平均情况：T(n)=O(n2)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--桶排序结束-->
+
+                        <!--基数排序开始-->
+                        <div class="content_des_box" id="radix_sort">
+                            <h4>基数排序</h4>
+
+                            <blockquote>基数排序也是非比较的排序算法，对每一位进行排序，从最低位开始排序，复杂度为O(kn),为数组长度，k为数组中的数的最大的位数；</blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote>基数排序是按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优先级排序。最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前。基数排序基于分别排序，分别收集，所以是稳定的。</blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li>取得数组中的最大数，并取得位数；</li>
+                                        <li>arr为原始数组，从最低位开始取每个位组成radix数组；</li>
+                                        <li>对radix进行计数排序（利用计数排序适用于小范围数的特点）；</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/radix_sort.gif"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/" target="_blank">基数排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n*k)</li>
+                                        <li>最差情况：T(n)=O(n*k)</li>
+                                        <li>平均情况：T(n)=O(n*k)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--基数排序结束-->
+
+
+
+                        <!--排序开始-->
+                        <div class="content_des_box" id="" style="display: none">
+                            <h4>排序</h4>
+
+                            <blockquote></blockquote>
+                            <ul>
+                                <li>
+                                    <label>算法简介</label>
+                                    <blockquote></blockquote>
+                                </li>
+                                <li>
+                                    <label>算法具体描述</label>
+                                    <ol>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <label>动画演示</label>
+                                    <img src="images/"/>
+                                </li>
+                                <li>
+                                    <label>Javascript源代码</label>
+                                    <p>
+                                        <a class="btn_sort_code" href="javascripts/" target="_blank">排序</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <label>算法复杂度分析</label>
+                                    <ul class="ul_circle">
+                                        <li>最佳情况：T(n)=O(n2)</li>
+                                        <li>最差情况：T(n)=O(n2)</li>
+                                        <li>平均情况：T(n)=O(n2)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--排序结束-->
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-3 col-sm-offset-1 wrp_sidebar">
+                <div class="sidebar_module">
+                    <h4>推荐书籍</h4>
+
+                    <ul class="sidebar_list">
+                        <li><a href="#">《大话数据结构》</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar_module">
+                    <h4>推荐链接</h4>
+
+                    <ul class="sidebar_list">
+                        <li><a target="_blank" href="http://blog.csdn.net/booirror/article/details/7707551/">时间复杂度和空间复杂度详解</a>
+                        </li>
+                        <li><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551303&idx=1&sn=874d11abf8eef9ae9365e55804bfe56f&chksm=8025a186b75228907634cd48e85c962f28662731bbd7a5c30df334f6128a707aac0369cdc477&mpshare=1&scene=1&srcid=0206cH5kS9kw9aV0oj6EDjCd&key=8a461f90db2e2c4052dc860ba2a4149b7b75ed2d6b7e6235a4bc2d1d898b188a6ab6fae20f4e92b5a91c76ac3f18e13dc286bda6f594cf5fbf5c1234f43b76df0345abc05e83e7fbb4296b102e5bd8d5&ascene=0&uin=MTMzNTc2NjIyMA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D32)&version=12010310&nettype=WIFI&fontScale=100&pass_ticket=vBQB%2B2sL6pAEWRq6A2iAuKPJv%2F%2BPwETvmtCW6kUnwb%2BiSGPTPqPr8qePjhQbOsO8">十大经典排序算法的JS版</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar_module">
+                    <h4>目录</h4>
+                    <ul class="sidebar_list">
+                        <li><a href="#">2014-1-1</a></li>
+                        <li><a href="#">2015-2-1</a></li>
+                        <li><a href="#">2016-6-1</a></li>
+                        <li><a href="#">2016-5-1</a></li>
+                        <li><a href="#">2017-8-1</a></li>
+                        <li><a href="#">2018-12-1</a></li>
+                        <li><a href="#">2019-11-1</a></li>
+                        <li><a href="#">2010-7-1</a></li>
+                        <li><a href="#">2011-9-1</a></li>
+                        <li><a href="#">2012-10-1</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar_module">
+                    <h4>联系我</h4>
+                    <ul class="sidebar_list">
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">腾讯微博</a></li>
+                        <li><a href="#">QQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!--主体内容结束-->
+
+
+<!--尾部开始-->
+<footer>
+
+    <div class="container">
+        <ul class="footer_qr">
+            <li>
+                <img src="../../common_folder/images/qr-wechat.jpg">
+                <p>微信公众号</p>
+            </li>
+        </ul>
+        <ul class="footer_menu">
+            <li><a href="" target="_top">首页</a></li>
+            <li><a href="" target="_blank">关于本站</a></li>
+            <li><a href="" target="_blank">随笔</a></li>
+            <li><a href="" target="_blank">小白宝典</a></li>
+            <li><a href="" target="_blank">HTML</a></li>
+            <li><a href="" target="_blank">CSS</a></li>
+            <li><a href="" target="_blank">JS</a></li>
+            <li><a href="" target="_blank">插件</a></li>
+            <li><a href="" target="_blank">总结</a></li>
+            <li><a href="" target="_blank">联系我</a></li>
+        </ul>
+        <p>商务合作：<a href="mailto:953075999@qq.com">953075999@qq.com</a></p>
+    </div>
+
+
+</footer>
+<!--尾部结束-->
+
+</body>
+
+<!--全局js开始-->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../plugin_folder/jquery_v1.11.3/jquery-1.11.3.min.js">\x3C/script>')</script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--全局js结束-->
+
+<script src="../../plugin_folder/less_v1.7.0/less.min.js"></script>
+
+</html>

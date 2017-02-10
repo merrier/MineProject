@@ -79,6 +79,13 @@
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
+html body blockquote {
+  font-size: inherit;
+  margin: 10px;
+}
+html body ul.ul_circle {
+  list-style-type: initial;
+}
 html body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -107,6 +114,7 @@ html body header.navbar .navbar-right .nav-icon-box img {
 }
 html body .wrp {
   margin-bottom: 0;
+  background-color: #fff;
 }
 html body .wrp .wrp_header {
   padding-top: 20px;
@@ -125,7 +133,8 @@ html body .wrp .wrp_content .content_main .content_box {
   margin-bottom: 20px;
 }
 html body .wrp .wrp_content .content_main .content_box p {
-  font-size: 16px;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 html body .wrp .wrp_content .content_main .content_box .content_meta {
   margin-bottom: 5px;
@@ -142,15 +151,13 @@ html body .wrp .wrp_content .content_main .content_box .content_des .content_des
   clear: both;
   visibility: hidden;
 }
-html body .wrp .wrp_content .content_main .content_box .content_des .content_des_box h4 {
-  margin: 5px 0;
+html body .wrp .wrp_content .content_main .content_box .content_des .content_des_box label {
+  font-size: 16px;
+  font-weight: bold;
 }
 html body .wrp .wrp_content .wrp_sidebar .sidebar_module {
   padding: 15px;
   margin: 0 -15px 15px;
-}
-html body .wrp .wrp_content .wrp_sidebar .sidebar_module h4 {
-  margin-bottom: 10px;
 }
 html body footer {
   text-align: center;

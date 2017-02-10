@@ -79,6 +79,13 @@
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
+html body blockquote {
+  font-size: inherit;
+  margin: 10px;
+}
+html body ul.ul_circle {
+  list-style-type: initial;
+}
 html body .wrp .wrp_content .content_box.beautiful_btns a {
   float: left;
   display: inline-block;
